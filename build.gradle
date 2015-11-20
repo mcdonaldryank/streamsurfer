@@ -1,0 +1,9 @@
+apply plugin: 'eclipse'
+
+task help(){
+	println("============")
+	println("This is strictly a junk gradle build file for creating eclipse ide files..")
+	println("Make sure you have the GoClipse eclipse plugin installed from GoClipse - http://goclipse.github.io/releases/")
+	println("run ```gradle eclipse``` to generate the ide files.")
+	println("============")
+}
