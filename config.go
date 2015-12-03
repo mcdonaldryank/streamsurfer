@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
-	"launchpad.net/goyaml"
+	"gopkg.in/yaml.v2"
 	"net/http"
 	"regexp"
 	"strings"

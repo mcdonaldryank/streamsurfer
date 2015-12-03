@@ -1,9 +1,49 @@
 apply plugin: 'eclipse'
 
-task help(){
+
+ant.condition(property: "os", value: "unix" ) { os(family: "unix") }
+
+/**
+*
+**/
+task description(){
 	println("============")
 	println("This is strictly a junk gradle build file for creating eclipse ide files..")
 	println("Make sure you have the GoClipse eclipse plugin installed from GoClipse - http://goclipse.github.io/releases/")
 	println("run ```gradle eclipse``` to generate the ide files.")
 	println("============")
+}
+
+/**
+*
+**/
+task buildProject(type:Exec) {
+
+    commandLine 'go', 'get', 'github.com/grafov/bcast'
+   
+    standardOutput = new ByteArrayOutputStream()
+   
+  
+ 	commandLine 'go', 'get', 'github.com/grafov/m3u8'
+ 	commandLine 'go', 'get', 'github.com/gorilla/mux'
+ 	commandLine 'go', 'get', 'github.com/garyburd/redigo/redis'
+ 	commandLine 'go', 'get', 'gopkg.in/yaml.v2'
+  	
+ 	//commandLine 'make install'
+  
+}
+
+buildProject.doFirst {
+    println 'doFirst'
+    print standardOutput.toString()
+}
+    
+ buildProject << {
+ 	println 'doLast'
+ 	print standardOutput.toString()
+ }
+/**
+*/
+task clean(){
+
 }
