@@ -66,9 +66,3 @@ Similar projects
  * http://code.google.com/p/hls-player
  * http://github.com/brookemckim/hlspider
 
-Build status
-------------
-
-[![Build Status](https://travis-ci.org/grafov/hlsprobe2.png?branch=master)](https://travis-ci.org/grafov/hlsprobe2)
-
-[![Is maintained?](http://stillmaintained.com/grafov/hlsprobe2.png)](http://stillmaintained.com/grafov/hlsprobe2)
